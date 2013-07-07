@@ -177,8 +177,8 @@ module Fitgem
       resource_path = "/user/#{@user_id}/activities/"
 
       if time_window_specified
-        start_time = format_time(opts.delete(:startTime))
-        end_time = format_time(opts.delete(:endTime))
+        start_time = opts.delete(:startTime)
+        end_time = opts.delete(:endTime)
         resource_path += "#{resource}/date/#{start_time}/#{end_time}.json"
       else
         resource_path += "#{resource}/date/#{date}/#{detail_level}.json"
