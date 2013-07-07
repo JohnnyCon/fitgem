@@ -166,7 +166,7 @@ module Fitgem
         raise Fitgem::InvalidArgumentError, 'Must specify the date to fetch intraday time series data for.'
       end
 
-      unless opts[:detailLevel] && %w(1min 15min).include?(opts[:detailLevel])
+      unless opts[:detailLevel] && %w(1min 15min 1d).include?(opts[:detailLevel])
         raise Fitgem::InvalidArgumentError, 'Must specify the data resolution to fetch intraday time series data for. One of (\"1d\" or \"15min\") is required.'
       end
 
