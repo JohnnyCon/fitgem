@@ -184,6 +184,8 @@ module Fitgem
         resource_path += "#{resource}/date/#{date}/#{detail_level}.json"
       end
 
+      puts resource_path
+
       get(resource_path, opts)
     end
   end
