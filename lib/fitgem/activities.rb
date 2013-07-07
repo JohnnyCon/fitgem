@@ -179,7 +179,7 @@ module Fitgem
       if time_window_specified
         start_time = format_time(opts.delete(:startTime))
         end_time = format_time(opts.delete(:endTime))
-        resource_path += "#{resource}/date/#{date}/#{detail_level}/time/#{start_time}/#{end_time}.json"
+        resource_path += "#{resource}/date/#{start_time}/#{end_time}.json"
       else
         resource_path += "#{resource}/date/#{date}/#{detail_level}.json"
       end
